@@ -1,0 +1,18 @@
+.section--choice {
+  background-color: darken(#871535, 5%);
+  color: #fff;
+
+  .section-content {
+    background-color: #871535;
+    float: left;
+    width: 50%;
+  }
+
+  .section-aux {
+    background-image: url('../img/choice.jpg');
+    width: 50%;
+  }
+
+  h1 { color: #fff; }
+  .intro { color: #ECEAC6; }
+}

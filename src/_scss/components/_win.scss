@@ -1,0 +1,20 @@
+.section--win {
+  background-color: darken(#ECEAC6, 5%);
+
+  .intro { color: #871535; }
+  h1 {
+    color: #222;
+  }
+
+  .section-content {
+    background-color: #ECEAC6;
+  }
+
+  .section-blur-image {
+    background-image: url('../img/win.jpg');
+  }
+
+  .section-blur-bgr {
+    background-image: url('../img/win-blur.jpg');
+  }
+}

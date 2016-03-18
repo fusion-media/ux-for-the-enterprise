@@ -1,0 +1,59 @@
+.section {
+  display: block;
+  position: relative;
+  min-height: 100vh;
+  @include clearfix;
+}
+
+.section-content {
+  padding: ($baseSpacing * 2);
+
+  p { max-width: 36em; }
+  h1 {
+    font-size: $baseFontSize * 3;
+    margin: ($baseSpacing * 1) 0 ($baseSpacing * 2);
+  }
+}
+
+.section-aux {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  height: 100vh;
+
+  &.is-fixed {
+    position: fixed;
+  }
+
+  &.past-fixed {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+.section-aux-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 360px;
+}
+
+
+.section-content-right {
+  .section-content {
+
+  }
+  .section-aux {
+    left: 0;
+  }
+}
+
+
+.section-content-left {
+  .section-content {
+
+  }
+  .section-aux {
+    right: 0;
+  }
+}

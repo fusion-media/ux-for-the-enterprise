@@ -1,0 +1,14 @@
+%typeRhythm {
+    margin: 0;
+    padding: 0;
+    margin-bottom: $baseLineHeight + rem;
+}
+
+@mixin fontSize($font-size, $line-height: true) {
+    font-size: ($font-size / $baseFontSize) * 1rem;
+
+    @if $line-height == true {
+        line-height: ceil($font-size / $pixelLineHeight) * ($pixelLineHeight / $font-size);
+    }
+
+}

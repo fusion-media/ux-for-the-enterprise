@@ -1,0 +1,12 @@
+$buttonColors: map-merge($colors, (
+  'success': $successColor,
+  'warning': $warningColor,
+  'error': $errorColor,
+  'danger': $errorColor
+));
+
+@each $name, $color in $buttonColors {
+  .btn--#{$name} {
+    @include button($color);
+  }
+}

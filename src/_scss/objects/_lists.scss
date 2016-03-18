@@ -1,0 +1,25 @@
+.ui-list,
+%ui-list {
+  font-family: $uiFont;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-group {
+  @extend %panel;
+  @extend %ui-list;
+  margin-bottom: $baseSpacing;
+}
+.list-group-item {
+  border-bottom: $baseBorder;
+  display: block;
+  padding: $smallSpacing;
+}
+a.list-group-item {
+  @extend %ui-link;
+}
+.list-group-title {
+  background-color: darken($bgrAltColor, 3%);
+  font-weight: bold;
+}

@@ -1,0 +1,89 @@
+.topnav {
+  background-color: #000;
+  height: 2rem;
+
+  a {
+    line-height: 2rem;
+    text-decoration: none;
+    font-family: $sans;
+    font-size: $baseFontSize * .85;
+  }
+}
+
+
+.nav {
+  background-color: transparentize(#000, .25);
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  overflow: hidden;
+  padding: .25em 0;
+  white-space: nowrap;
+  width: 1.75em;
+  transition: width .25s ease-in-out;
+
+  &:hover {
+    width: 25em;
+
+    .nav-text { opacity: 1; }
+  }
+}
+
+.nav-items {
+  @extend %ui-list;
+  font-family: $sans;
+}
+
+.nav-item {
+  height: 1.5em;
+}
+
+.nav-link {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: right;
+  padding: .25em 0;
+  line-height: 1;
+  width: 100%;
+  text-decoration: none;
+  color: #cacaca;
+  transition: color .125s ease-in-out;
+
+  .nav-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    opacity: 0;
+    transition: opacity .125s ease-in-out;
+    position: absolute;
+    right: 1.75em;
+    top: .125em;
+  }
+
+  .nav-dot {
+    content: '';
+    background-color: #cacaca;
+    display: inline-block;
+    width: .75em;
+    height: .75em;
+    border-radius: 50%;
+    position: absolute;
+    right: .5em;
+    top: .25em;
+    transition: background .125s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    .nav-dot { background-color: #fff; }
+  }
+
+  &.is-current {
+    color: #f6c000;
+    .nav-dot { background-color: #F6C000; }
+  }
+}

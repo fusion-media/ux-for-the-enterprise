@@ -1,0 +1,116 @@
+.form-table {
+  @include media('>sm') {
+    .form-label {
+      @include span(3);
+      margin-top: ($smallSpacing / 4);
+      margin-bottom: 0;
+      text-align: right;
+    }
+
+    .form-control,
+    .form-group-content,
+    .form-desc {
+      @include span(9);
+      float: right;
+    }
+
+    .form-group-content .form-control {
+      float: left;
+      clear: both;
+      margin-left: 0;
+      width: auto;
+    }
+
+    .form-footer {
+      @include span(9);
+      float: right;
+    }
+  }
+}
+
+.form-control {
+  display: block;
+}
+
+.form-label {
+  font-family: $uiFont;
+  display: block;
+  font-weight: 600;
+  margin-bottom: ($smallSpacing / 2);
+}
+
+.form-group {
+  margin-bottom: ($baseSpacing * 1.5);
+  width: 100%;
+
+  input,
+  select,
+  textarea { margin-bottom: 0; }
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.form-desc {
+  color: $mutedColor;
+  display: block;
+  font-family: $uiFont;
+  margin-bottom: $smallSpacing;
+  @include fontSize($baseFontSize * .85);
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.form-group-radio,
+.form-group-checkbox {
+  .form-control {
+    cursor: pointer;
+    margin-bottom: ($smallSpacing / 2);
+    padding-left: 1.25rem;
+    width: auto;
+  }
+  
+  .form-group-content .form-control {
+    float: left;
+    clear: both;
+    margin-left: 0;
+    width: auto;
+  }
+
+  label {
+    font-family: $uiFont;
+    @include fontSize($baseFontSize * .85);
+  }
+  input { margin-left: -1.25rem; }
+}
+
+
+$states: (
+  'success': $successColor,
+  'warning': $warningColor,
+  'error': $errorColor
+);
+
+.has-success,
+.has-warning,
+.has-error {
+  .form-control {
+    background-position: calc(100% - (#{$smallSpacing / 2})) center;
+    background-repeat: no-repeat;
+    padding-right: 1.5rem;
+
+    &:focus { border-color: $actionColor; }
+  }
+}
+
+@each $name, $color in $states {
+  .has-#{$name} {
+    .form-label,
+    .form-validation {
+      color: $color;
+    }
+    .form-control {
+      background-image: url('../img/#{$name}.svg');
+      border-color: $color;
+    }
+  }
+}

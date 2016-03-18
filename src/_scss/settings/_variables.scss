@@ -1,0 +1,19 @@
+$siteFullwidth: true;
+
+$animDuration: .125s;
+
+$fonts: (
+  'serif': #{'Publico Headline', Georgia, Times, 'Times New Roman', serif},
+  'sans': #{'BentonSans', 'Helvetica Neue', Helvetica, Arial, sans-serif},
+  'condensed': #{'BentonSansCond', 'Helvetica Neue', Helvetica, Arial, sans-serif}
+);
+
+$baseFont: map-get($fonts, 'sans');
+$headingFont: map-get($fonts, 'serif');
+$uiFont: map-get($fonts, 'condensed');
+
+$serif: map-get($fonts, 'serif');
+$sans: map-get($fonts, 'sans');
+$condensed: map-get($fonts, 'condensed');
+
+$iffBlue: #0064B2;

@@ -1,0 +1,18 @@
+.section--firsts {
+  background-color: darken(#005665, 5%);
+  color: #fff;
+
+  .section-content {
+    background-color: #005665;
+    float: right;
+    width: 50%;
+  }
+
+  .section-aux {
+    background-image: url('../img/firsts.jpg');
+    width: 50%;
+  }
+
+  h1 { color: #fff; }
+  .intro { color: #DCFFE2; }
+}

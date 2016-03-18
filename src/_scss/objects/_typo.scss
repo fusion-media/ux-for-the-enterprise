@@ -1,0 +1,38 @@
+.intro {
+  font-size: $baseFontSize * 1.125;
+}
+
+
+.bigquote {
+  color: #fff;
+  font-family: $serif;
+  font-size: ($baseFontSize * 2.25);
+  font-style: italic;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: ($baseSpacing * 2);
+  text-indent: -.41em;
+
+  &:before { content: '\201C'; }
+  &:after  { content: '\201D'; }
+}
+
+
+.aux-image {
+  margin: 0;
+}
+.aux-caption {
+  span {
+
+  }
+}
+
+
+.columns {
+  @media (min-width: 1600px) and (min-height: 1024px) {
+    columns: 2;
+    column-gap: ($baseSpacing * 2);
+  }
+}

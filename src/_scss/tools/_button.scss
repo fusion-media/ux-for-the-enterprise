@@ -1,0 +1,46 @@
+@mixin button($color) {
+  background-color: $color;
+  border-color: $color;
+  @if(lightness(darken($color, 5%)) > 50) {
+    color: darken($color, 40%);
+  } @else {
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($color, 20%);
+    border-color: darken($color, 20%);
+  }
+  &:focus { box-shadow: 0 0 6px $color; }
+
+  &:disabled {
+    &:hover {
+      background-color: $actionColor;
+      border-color: $actionColor;
+    }
+  }
+
+  &.btn--outline {
+    border: 1px $color solid;
+    color: $color;
+
+    &:hover,
+    &:focus {
+      background-color: $color;
+
+      @if(lightness(darken($color, 5%)) > 50) {
+        color: darken($color, 40%);
+      } @else {
+        color: #fff;
+      }
+    }
+
+    &:disabled {
+      &:hover,
+      &:focus {
+        color: $color;
+      }
+    }
+  }
+}

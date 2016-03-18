@@ -1,0 +1,38 @@
+.section--letter {
+  background-color: $iffBlue;
+
+  .section-content {
+    background-color: #fff;
+    margin-left: 40%;
+    width: 60%;
+  }
+
+  .section-aux {
+    background-color: $iffBlue;
+    width: 40%;
+  }
+
+  .aux-caption {
+    height: 3em;
+    margin-top: -3em;
+    text-align: right;
+    padding-right: $baseSpacing;
+
+    span {
+      display: block;
+      line-height: 1.25;
+    }
+  }
+}
+
+
+.letter-salutation {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.letter-note { color: #D2D3D5; }
+.letter-signature {
+  display: block;
+  width: 160px;
+  margin-bottom: $baseSpacing * 2;
+}

@@ -1,0 +1,50 @@
+.section--start {
+  background: $iffBlue url('../img/circles.png');
+  background-attachment: fixed;
+  background-size: 120px;
+  border-bottom: 2px #0B5BA3 solid;
+  display: block;
+  padding: $baseSpacing 0;
+  height: calc(100vh - 2rem);
+  position: relative;
+  z-index: 100;
+  min-height: 800px;
+}
+
+.start-panel {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  // transform: translateY(-50%) translateX(-50%);
+  margin-left: -12.5em;
+  margin-top: -12.5em;
+  width: 25em;
+  height: 25em;
+}
+
+.start-title {
+  margin-left: $baseSpacing;
+  text-transform: uppercase;
+  font-family: $sans;
+  font-size: $baseFontSize * .9;
+  font-weight: bold;
+  display: block;
+  position: absolute;
+  top: $baseSpacing;
+}
+
+.start-tagline {
+  font-size: $baseFontSize * 2.5;
+  position: absolute;
+  top: 50%;
+  padding: $baseSpacing;
+  transform: translateY(-50%);
+}
+
+.start-logo {
+  margin-left: $baseSpacing;
+  width: 100px;
+  position: absolute;
+  bottom: $baseSpacing;
+}

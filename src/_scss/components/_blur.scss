@@ -1,0 +1,77 @@
+.blur {
+  overflow: hidden;
+
+  .section-blur-title {
+    font-size: $baseFontSize * 3.5;
+    position: absolute;
+    top: $baseSpacing * 3;
+    left: $baseSpacing * 2;
+    text-shadow: 0 0 20px transparentize(#fff, .5), 0 2px 2px transparentize(#000, .75);
+    width: 35%;
+    z-index: 100;
+  }
+
+  .section-content {
+    position: relative;
+    width: 35%;
+    margin-left: 35%;
+    margin-right: 30%;
+    margin-top: 80vh;
+    margin-bottom: -40vh;
+    z-index: 100;
+  }
+
+  .section-blur-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    will-change: opacity;
+    // background-attachment: fixed;
+  }
+
+  .section-blur-bgr {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-attachment: fixed;
+  }
+
+  .section-blur-image,
+  .section-blur-bgr {
+    transform: scale(1.125) translateY(5%);
+  }
+
+
+  // When Fixed
+  &.is-fixed {
+    .section-blur-title { position: fixed; }
+    .section-blur-image,
+    .section-blur-bgr { position: fixed; }
+  }
+
+  &.past-fixed {
+    .section-blur-title {
+      top: auto;
+      bottom: calc(100vh - #{$baseSpacing * 3});
+      transform: translateY(120%);
+      position: fixed;
+    }
+    .section-blur-image,
+    .section-blur-bgr {
+      top: auto;
+      bottom: 0;
+      position: fixed;
+    }
+    .section-blur-image { opacity: 0 !important; }
+  }
+}
